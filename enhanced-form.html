@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML5 enhanced content and forms assignment example with lists, tables, media, and fully accessible form with validation.">
+    <meta name="keywords" content="HTML5, Forms, Validation, Lists, Tables, Media, Accessibility">
+    <meta name="author" content="Your Name">
+    <title>HTML5 Enhanced Content & Forms</title>
+</head>
+<body>
+
+    <!-- Skip link for accessibility -->
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <h1>HTML5 Enhanced Content & Forms</h1>
+        <p>Practice using lists, tables, media, and accessible forms with native HTML5 validation.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#content">Content Examples</a></li>
+            <li><a href="#form-section">HTML5 Form</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="maincontent">
+
+        <!-- Content Section -->
+        <section id="content">
+            <h2>Content Examples</h2>
+
+            <!-- Lists -->
+            <article>
+                <h3>HTML5 Lists</h3>
+                <p>Using ordered and unordered lists:</p>
+                <ul>
+                    <li>Semantic HTML structure</li>
+                    <li>Accessibility best practices</li>
+                    <li>SEO-friendly content</li>
+                </ul>
+                <ol>
+                    <li>Plan content hierarchy</li>
+                    <li>Use proper headings</li>
+                    <li>Apply semantic tags</li>
+                </ol>
+            </article>
+
+            <!-- Table -->
+            <article>
+                <h3>Sample Table</h3>
+                <p>Displaying tabular data for clarity:</p>
+                <table border="1">
+                    <caption>HTML5 Form Input Types</caption>
+                    <thead>
+                        <tr>
+                            <th>Input Type</th>
+                            <th>Description</th>
+                            <th>Validation Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>text</td>
+                            <td>Simple text input</td>
+                            <td>Required, minlength="3"</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td>Email address input</td>
+                            <td>Required, type="email"</td>
+                        </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>Numeric input</td>
+                            <td>Min="1", Max="100"</td>
+                        </tr>
+                        <tr>
+                            <td>password</td>
+                            <td>Password field</td>
+                            <td>Required, minlength="6"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <!-- Media -->
+            <article>
+                <h3>Embedded Media</h3>
+                <p>Including image, audio, and video content:</p>
+
+                <!-- Image -->
+                <figure>
+                    <img src="https://via.placeholder.com/300x150" alt="Sample placeholder image">
+                    <figcaption>Example of an image with descriptive alt text.</figcaption>
+                </figure>
+
+                <!-- Audio -->
+                <figure>
+                    <audio controls>
+                        <source src="sample-audio.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <figcaption>Sample audio clip embedded with HTML5.</figcaption>
+                </figure>
+
+                <!-- Video -->
+                <figure>
+                    <video controls width="320">
+                        <source src="sample-video.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                    <figcaption>Sample video embedded with HTML5.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- Form Section -->
+        <section id="form-section">
+            <h2>HTML5 Form Example</h2>
+            <p>Accessible, validated, and user-friendly form:</p>
+
+            <form action="#" method="post">
+                
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3" autocomplete="name">
+                    <br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required autocomplete="email">
+                    <br><br>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="1" max="120" required>
+                </fieldset>
+
+                <br>
+
+                <!-- Account Information -->
+                <fieldset>
+                    <legend>Account Information</legend>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Choose a username" required minlength="4">
+                    <br><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required minlength="6">
+                    <br><br>
+
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required minlength="6">
+                </fieldset>
+
+                <br>
+
+                <!-- Preferences -->
+                <fieldset>
+                    <legend>Preferences</legend>
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br><br>
+
+                    <label>Subscribe to newsletter:</label>
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                </fieldset>
+
+                <br>
+
+                <!-- Comments -->
+                <fieldset>
+                    <legend>Comments</legend>
+                    <label for="comments">Your message:</label>
+                    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Write your comments here" required></textarea>
+                </fieldset>
+
+                <br>
+                <button type="submit">Submit Form</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>Contact: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </footer>
+
+</body>
+</html>
